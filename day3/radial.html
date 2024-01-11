@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radial</title>
+    <style>
+         .box{
+            height: 200px;
+            width: 200px;
+            color: azure;
+            margin: 20px;
+            text-align: center;
+            float: left;
+        }
+        .grad{
+
+            background: radial-gradient( darkblue, aqua);
+        }
+        /* 45deg; 45 degree radius */
+        .grad2{
+            background: radial-gradient(circle, darkorchid, white);
+        }
+        .grad3{
+            background: radial-gradient(circle at 10% 50%, darkblue, white, darkblue 30%);
+        }
+        .grad4{
+            background: radial-gradient(circle closest-side at 20% 50%, darkorchid, darkblue);
+        }
+        .grad5{
+            background: radial-gradient(circle closest-corner at 30% 50%, darkorchid, darkblue);
+        }
+        .grad6{
+            background: radial-gradient(circle farthest-side at 30% 50%, darkorchid, darkblue);
+        }
+        .grad7{
+            background: radial-gradient(circle farthest-corner at 30% 50%, darkorchid, darkblue);
+        }
+    </style>
+</head>
+<body>
+    <div class="box grad">radial</div>
+    <div class="box grad2">circle</div>
+    <div class="box grad3">darkblue, white</div>
+    <div class="box grad4">closest-side</div>
+    <div class="box grad5">closest-corner</div>
+    <div class="box grad6">farthest-side</div>
+    <div class="box grad7">farthest-corner</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <!-- <link rel="stylesheet" href="style1.css"> -->
+    <h1>회원 가입을 환영합니다.</h1>
+</head>
+
+<body>
+    <form action="first.html">
+        <fieldset>
+            <legend>사용자 정보 입력 </legend>
+            <div>이름: <input id="userName" type="text" autofocus required></div>
+            <label>
+                <div>아이디: <input id="userId" placeholder="영어 + 숫자 조합" type="text" required></div>
+            </label>
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" required>
+            <div>비밀번호: <input type="password"></div>
+            <label for="confirm-password">비밀번호 확인:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required>
+            <div>
+                <label>
+                    가입경로
+                    <select name="route">
+                        <option value="블로그"> 블로그</option>
+                        <option value="검색">검색</option>
+                        <option value="SNS">SNS</option>
+                        <option value="기타">기타</option>
+                    </select>
+                </label>
+            </div>
+            <label>
+                이메일
+                <input type="text" placeholder="이메일 주소">
+                @
+                <select id="email">
+                    <option> 직접입력 </option>
+                    <option value="naver"> naver.com </option>
+                    <option value="google"> google.com </option>
+                    <option value="hanmail"> hanmail.net </option>
+                </select>
+            </label>
+            <div>
+                
+                <textarea id="" cols="50" rows="5" placeholder="남길 말씀 있다면 여기에"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend> 이벤트와 새로운 소식</legend>
+            <div>
+                <input type="radio" name="email" id="메일 수신">
+                <label for="email">메일 수신</label>
+                <input type="radio" name="email" id="메일 수신 안함">
+                <label for="email"> 메일 수신 안함</label>
+            </div>
+
+        </fieldset>
+
+
+
+        <!-- <button>제출</button> -->
+        
+        <input type="submit" value="가입하기">
+            <a href="https://naver.com" target="_parent"></a>
+        <input type="reset" value="취소">
+    </form>
+</body>
+
+</html>

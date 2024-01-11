@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .box{
+            height: 200px;
+            width: 200px;
+            color: rgb(29, 31, 31);
+            font-weight: bold;
+            margin: 20px;
+            text-align: center;
+            border-radius: 80%;
+        }
+        .grad{
+            background-color: darkblue;
+            background: repeating-linear-gradient(to right bottom, darkblue, white 60px);
+        }
+        /* 45deg; 45 degree radius */
+        .grad2{
+            background-color: darkorchid;
+            background: repeating-radial-gradient(circle, darkorchid, white 30%);
+        }
+        .grad3{
+            background-color: darkblue;
+            background: repeating-linear-gradient(to bottom, darkblue, white, darkblue 60px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box grad">repeating-linear-gradient</div>
+    <div class="box grad2">repeating-radial-gradient</div>
+    <div class="box grad3">repeating-linear-gradient</div>
+</body>
+</html>

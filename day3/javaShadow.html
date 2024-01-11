@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로그래밍 강좌 신청서 모집</title>
+    <style>
+        /* 페이지 기본 스타일 */
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #a53232;
+        }
+        /* 헤더 스타일 */
+        .header{
+            background-color: #004d40;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0 , 0, 0.1);
+        }
+        .header p.italic{
+            font-style: italic;
+            background: none;
+        }
+        /* 내용 구억 */
+        .content{
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0, 0 , 0, 0.1);
+        }
+        .course-list{
+            list-style-type: none;
+            padding: 0;
+        }
+        .course-list li{
+            margin-bottom: 10px;
+        }
+        /* 교재 이미지 */
+        .textbook{
+            width: 100%;
+            max-width: 200px;
+            float: right;
+        }
+        .footer{
+            background-color: #eeeeee;
+            text-align: right;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>프로그래밍 강좌 신청서 모집</h1>
+    </div>
+    <div class="header2">
+        <p>신입생 여러분을 기다립니다</p>
+    </div>
+    <div class="content">
+        <h2>모집분야</h2>
+        <ul class="course-list">
+            <li>자바(10명): 객채지향 자바 연습 활동</li>
+            <li>오라클(10명): 데이터베이스 설계 및 관리</li>
+            <li>HTML/CSS(15명): 웹 페이지 레이아웃</li>
+        </ul>
+        <h2>혜택</h2>
+        <p>해당 과목 서적 제공</p>
+        <p>우수 성적 시 장학금 지급</p>
+    </div>
+    <div>
+        <img src="../day3/image/bootcamp.png" class="textbook">
+    </div>
+</body>
+</html>

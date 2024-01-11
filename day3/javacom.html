@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프로그래밍 강좌 신청서 모집</title>
+    <style>
+        /* 페이지 기본 스타일 */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        /* 헤더 스타일 */
+        .header {
+            background-color: #f5f5f5; /* 헤더 배경색을 회색으로 변경 */
+            padding: 20px;
+            text-align: center;
+            color: rgb(56, 77, 47); /* 헤더 폰트 색상을 빨간색으로 변경 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* 그림자 효과 추가 */
+        }
+        /* 내용 구역 스타일 */
+        .content {
+            position: relative; /* 이미지 위치 조정을 위한 설정 */
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* 강좌 리스트 스타일 */
+        .course-list {
+            list-style-type: none;
+            padding: 0;
+            color: black; /* 리스트 폰트 색상을 검정색으로 변경 */
+        }
+        .course-list li {
+            margin-bottom: 10px;
+        }
+        /* 교재 이미지 스타일 */
+        .textbook {
+            width: 100%;
+            max-width: 200px;
+            position: absolute; /* 절대 위치 */
+            bottom: 20px; /* 하단에서 20px의 여백을 둠 */
+            right: 20px; /* 우측에서 20px의 여백을 둠 */
+        }
+        /* 푸터 스타일 */
+        .footer {
+            background-color: #eeeeee;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        /* 강조 문구 스타일 */
+        .content p.italic {
+            font-style: italic; /* 이탤릭체로 변경 */
+            background: none; /* 배경색 제거 */
+        }
+        /* 제목 색상 변경 */
+        h1, h2 {
+            color: red; /* 제목 폰트 색상을 빨간색으로 변경 */
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>프로그래밍 강좌 신청서 모집</h1>
+    </div>
+    <div class="content">
+        <p class="italic">신청서 양식을 기다립니다</p>
+        <h2>모집 분야</h2>
+        <ul class="course-list">
+            <li>자바(10명): 객체지향 자바 연습 활동</li>
+            <li>오라클(10명): 데이터베이스 설계 및 관리</li>
+            <li>HTML/CSS(15명): 웹 페이지 레이아웃</li>
+        </ul>
+        <h2>교재</h2>
+        <p>해당 과목 서적 제공</p>
+        <p>우수 성적 시 장학금 지급</p>
+        <img src="java.png" alt="JAVA Programming 교재" class="textbook">
+    </div>
+    <div class="footer">
+        <p>© 2024 프로그래밍 강좌. 모든 권리 보유.</p>
+    </div>
+</body>
+</html>
+
+   
+<!-- change the 
+    1)<style> 프로그래밍 강좌 신청서 모집 put gray shadow
+    2)<style> without background green <p>신청서 양식을 기다립니다</p> and font italic
+    3)<h1>, <h2> font color red; 
+    4)<li> to black font color
+    5)put image inside content bottom right
+    -->

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            border: 3px dashed black;
+            margin: 10px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .bg-red{
+            float: left;
+            background-color: red;
+        }
+        .bg-blue{
+            float: left;
+            background-color: blue;
+            /* border: 3px solid black; */
+            box-shadow: 4px 4px 4px 4px rgb(255, 3, 255);
+        }
+        .bg-green{
+            clear: both;
+            float: left;
+            background-color: green;
+        }
+        .bg-yellow{
+            clear: auto;
+            float: left;
+            background-color: yellow;
+        }
+        .bg-aqua{
+            clear: both;
+            float: left;
+            background-color: aqua;
+        }
+        /* emphasize the box */
+        .bg-red:hover{
+           background-color: #ccc;
+           color: black;
+        }
+        /* link without underline */
+        .bg-blue a:link, .bg-blue a:visited{
+            color: white;
+            text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box bg-red"> 빨간색</div>
+    <div class="box bg-blue">
+        <a href="https://naver.com" target="_blank">네이버</a>
+    </div>
+    <div class="box bg-green">초록색</div>
+    <div class= "box bg-yellow">노란색</div>
+    <div class="box bg-aqua">아쿠아색</div>
+</body>
+</html>

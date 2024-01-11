@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .box{
+            height: 200px;
+            width: 200px;
+            color: azure;
+            margin: 20px;
+            text-align: center;
+        }
+        .grad{
+            background-color: darkblue;
+            background: linear-gradient(to right bottom, darkblue, white);
+        }
+        /* 45deg; 45 degree radius */
+        .grad2{
+            background-color: darkorchid;
+            background: linear-gradient(10deg, darkorchid, white);
+        }
+        .grad3{
+            background-color: darkblue;
+            background: linear-gradient(to bottom, darkblue, white, darkblue 30%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box grad">darkblue</div>
+    <div class="box grad2">darkorchid</div>
+    <div class="box grad3">darkblue</div>
+</body>
+</html>

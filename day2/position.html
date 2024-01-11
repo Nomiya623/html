@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+        }
+        .box{
+            position: static; 
+            background-color: red;
+        }
+        .bg-yellow{
+            position: relative;
+            left: 30px;
+            background-color: yellow;
+        }
+        .bg-blue{
+            position: absolute;
+            top: 50px;
+            background-color: blue;
+        }
+        .bg-green{
+            position: fixed;
+            background-color: green;
+            top: 30px;
+            left: 600px;
+        }
+    </style>
+</head>
+<body> 
+    <div class="box bg-red"> 빨간색</div>
+    <div class="box bg-yellow"> 노란색</div>
+    <div style="position: relative; left: 30px;">
+        <div class="box bg-blue"> 파란색</div>
+    </div>
+    <div class="box bg-green"> 초록색</div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <br>
+    <br>
+    <br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>
