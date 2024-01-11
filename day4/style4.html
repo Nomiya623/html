@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div시작 기준 p이랑 형제 요소 */
+        div~p{
+            color: red;
+        }
+        p~div{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <p>The Joeun Academy</p>
+    <div>
+        <div>Programming Lecture</div>
+        <p>Java is fun</p>
+        <p>Oracle is boring</p>
+        <div>
+            <p>Next lecture html/css</p>
+        </div>
+    </div>
+</body>
+</html>

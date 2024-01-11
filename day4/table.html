@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Style</title>
+    <style>
+        table, tr, td {
+            border : 1px solid #bb7171;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        tr,td{
+            padding: 10px 20px;
+        }
+        /* 2n 홀수 2n+1 짝수 숫자 위치 */
+        tr:nth-of-type(2n+1){
+            background-color: rgb(58, 110, 155);
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td>Java</td>
+            <td>Oracle</td>
+            <td>Html/css</td>
+        </tr>
+        <tr>
+            <td>Hong</td>
+            <td>90</td>
+            <td>85</td>
+            <td>95</td>
+        </tr>
+        <tr>
+            <td>You</td>
+            <td>90</td>
+            <td>85</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>Kang</td>
+            <td>90</td>
+            <td>85</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>Park</td>
+            <td>90</td>
+            <td>85</td>
+            <td>90</td>
+        </tr>
+    </table>
+</body>
+</html>

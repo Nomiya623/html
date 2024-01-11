@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 부모 제외, 특정 클래스 및 위치
+        자식 요소한테만 적용 */
+        div > p{
+            color: rebeccapurple;
+        }
+    </style>
+</head>
+<body>
+    <p>The Joeun Academy</p>
+    <div>
+        <div>Programming Lecture</div>
+        <p>Java is fun</p>
+        <p>Oracle is boring</p>
+        <span>
+            <p>Next lecture html/css</p>
+        </span>
+    </div>
+</body>
+</html>

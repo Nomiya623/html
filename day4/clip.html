@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clip</title>
+    <style>
+        .box{
+            height: 150px;
+            width: 150px;
+            margin: 10px;
+            background-color: orange;
+            border: 5px dotted black;
+            padding: 20px;
+            text-align: center;
+            line-height: 150px;
+            color: white;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .pad{
+            background-clip: padding-box;
+        }
+        .cont{
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"> first box </div>
+    <div class="box pad"> second box </div>
+    <div class="box cont"> <div>
+        third box
+    </div> </div>
+</body>
+</html>

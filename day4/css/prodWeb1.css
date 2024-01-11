@@ -1,0 +1,32 @@
+.prod-list img {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 100%; /* Ensures image takes full width of the li */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.5s ease; /* Smooth transition for hover effect */
+  }
+  
+  .caption {
+    position: absolute;
+    top: 100%; /* Initially positioned below the image */
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    transition: top 0.5s ease; /* Transition for moving to the top */
+  }
+  
+  .prod-list li {
+    position: relative;
+    float: left;
+    padding: 0;
+    margin: 10px;
+    overflow: hidden;
+    width: 300px; /* Define a fixed width or make it responsive as needed */
+  }
+  
+  .prod-list li:hover .caption {
+    top: 0; /* Moves the caption to the top on hover */
+  }
+  

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+         .box{
+            height: 150px;
+            width: 150px;
+            margin: 50px;
+            background-color: rgb(190, 69, 174);
+            border: 1px solid black;
+            transition: all 2s;
+
+        }
+        .rot1{
+            transform: rotate(45deg);
+        }
+        #rot2:hover{
+            transform: rotate(45deg);
+        }
+        #rot3:hover{
+            transform: rotate3d(2.5, 1.5, 1.5, 55deg);
+        }
+        #skew1{
+            transform: skewX(45deg);
+        }
+        #skew2:hover{
+            transform: skew(20deg,30deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box rot1"></div>
+    <div class="box" id="rot2"></div>
+    <div class="box" id="rot3"></div>
+    <div class="box" id="skew1"></div>
+    <div class="box" id="skew2"></div>
+</body>
+</html>

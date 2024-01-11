@@ -1,0 +1,33 @@
+.prod-list img {
+    margin: 0;
+    padding: 0;
+    float: left;
+    z-index: 5;
+    transition: transform 0.5s ease; /* Adding transition for the hover effect */
+  }
+  
+  .caption {
+    position: absolute; /* Positioning the caption */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear; /* Transition for smooth appearance */
+  }
+  
+  .prod-list li:hover .caption {
+    visibility: visible; /* Show on hover */
+    opacity: 1;
+  }
+  
+  .prod-list li {
+    position: relative; /* Needed for absolute positioning of the caption */
+    float: left;
+    padding: 0;
+    margin: 10px;
+    overflow: hidden;
+  }
+  

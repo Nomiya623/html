@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style</title>
+    <style>
+        /* 특정 속성 */
+        a{
+            text-decoration: none;
+        }
+        a[target="_blank"]{
+            background-color: aquamarine;
+        }
+        .a-br{
+            border: 1px solid black;
+        }
+        .a-rd{
+            border-radius: 10px;
+        }
+        /* or 속성 */
+        a[class~="a-br"]{
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- <a href="javascript:;">link1</a> -->
+    <a href="#" class="a-br a-rd" target="_blank">link</a> <br><br>
+    <a href="#" class="a-br" target="_self">link2</a> <br><br>
+    <a href="#" class="a-br a-rd">target without link</a>
+</body>
+</html>

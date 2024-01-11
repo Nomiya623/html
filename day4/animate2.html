@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+         .box{
+            height: 150px;
+            width: 150px;
+            margin: 50px;
+            background-color: rgb(190, 69, 174);
+            border: 1px solid black;
+            transition: all 2s;
+            float: left;
+        }
+        /* #scale1:hover{
+            transform: scaleY(1.5);
+        }
+        #scale2:hover{
+            transform: scale(2, 3);
+        } */
+        .ani:hover div{
+            height: 500px;
+        }
+        .box:hover{
+            height: 500px;
+        }
+        .ease{
+            transition: 3s ease;
+        }
+        .linear{
+            transition: 3s linear;
+        }
+        .ease-in{
+            transition: 3s ease-in;
+        }
+        .ease-in-out{
+            transition: 3s ease-in-out;
+        }
+        .ease-out{
+            transition: 3s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- /* <div class="box scale1"></div>
+    <div class="box scale2"></div> */ -->
+    <div class="ani">
+        <div class="box ease"></div>
+        <div class="box linear"></div>
+        <div class="box ease-in"></div>
+        <div class="box ease-in-out"></div>
+        <div class="box ease-out"></div>
+    </div>
+</body>
+</html>

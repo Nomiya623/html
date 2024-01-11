@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown Menu Bar</title>
+    <style>
+        /* navbar */
+        .navbar {
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #777777;
+            border: 1px solid #aca8a8;
+            display: inline-block;
+        }
+
+        /* navbar list */
+        .navbar a .navbar .dropbtn {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* droptown container */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* droptown button */
+         .dropbtn {
+            cursor: pointer;
+            font-size: 16px;    
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        /* droptown contents */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            /* z-index: 1; */
+        }
+
+        /* droptown contents link */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* droptown item hover */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        /* droptown hover when click */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        /* sub droptown  */
+        .dropdown-content .sub-droptown{
+            position: relative;
+        }
+        /* sub droptown contents */
+        .sub-droptown-content{
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            /* z-index: 1; */
+        }
+        /* subdroptown list hover */
+        .sub-droptown:hover .sub-droptown-content{
+            display: block;
+        }
+        /* sub droptown link */
+        .sub-droptown-content a{
+            float: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Menu 1</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <div class="sub-dropdown">
+                <a href="#" >Link 3 </a>
+                <div class="sub-dropdown-content">
+                    <a href="#">Sublink 1</a>
+                    <a href="#">Sublink 2</a>
+                    <a href="#">Sublink 3</a>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <div class="dropdown">
+        <button class="dropbtn">Menu 2
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Menu 3
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Menu 4
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

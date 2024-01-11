@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dropdown Menu with Sublinks</title>
+    <style>
+
+        /* 네비게이션 바 스타일 */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        /* 네비게이션 바 항목 스타일 */
+        .navbar a, .navbar .dropbtn {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        /* 드롭다운 컨테이너 */
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        /* 드롭다운 버튼 */
+        .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+
+        /* 드롭다운 콘텐츠 */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* 드롭다운 링크 스타일 */
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        /* 드롭다운 아이템 호버 */
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        /* 드롭다운 호버 시 드롭다운 콘텐츠 표시 */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* 서브 드롭다운 */
+        .dropdown-content .sub-dropdown {
+            position: relative;
+        }
+
+        /* 서브 드롭다운 콘텐츠 */
+        .sub-dropdown-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* 서브 드롭다운 호버 시 서브 콘텐츠 표시 */
+        .sub-dropdown:hover .sub-dropdown-content {
+            display: block;
+        }
+
+        /* 서브 드롭다운 링크 */
+        .sub-dropdown-content a {
+            float: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="navbar">
+    <div class="dropdown">
+        <button class="dropbtn">Menu 1</button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <div class="sub-dropdown">
+                <a href="#">Link 3</a>
+                <div class="sub-dropdown-content">
+                    <a href="#">SubLink 1</a>
+                    <a href="#">SubLink 2</a>
+                    <a href="#">SubLink 3</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Menu 2
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Menu 3
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Menu 4
+        </button>
+        <div class="dropdown-content">
+            <a href="#">Link 1</a>
+            <a href="#">Link 2</a>
+            <a href="#">Link 3</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
