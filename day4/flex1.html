@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            background-color: #f9f9f9;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .box{
+            width: 50px;
+            margin: 5px;
+            background-color: tomato;
+            color: white;
+            text-align: center;
+
+        }
+        .flex-row{
+            flex-direction: row;
+        }
+        .flex-row-reverse{
+            flex-direction: row-reverse;
+        }
+        .flex-column{
+            flex-direction: column;
+        }
+        .flex-column-reverse{
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container flex-row">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    
+    </div>
+    <div class="container flex-row-reverse">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    
+    </div>
+    <div class="container flex-column">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    
+    </div>
+    <div class="container flex-column-reverse">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+    
+    </div>
+</body>
+</html>

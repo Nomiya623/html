@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Exapmle</title>
+    <style>
+        #container{
+            width: 600px;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            grid-template-rows: repeat(4,100px);
+        }
+        .box{
+            padding: 10px;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+        }
+        .blue-box{
+            background-color: blue;
+            grid-column: 1/4;
+        }
+        .green-box{
+            background-color: green;
+            /* grid-column: 3/4; */
+        }
+        .orange-box{
+            background-color: orange;
+            grid-row: 2/4;
+        }
+        .red-box{
+            background-color: red;
+            grid-column: 3/5;
+        }
+        .yellow-box{
+            background-color: yellow;
+            grid-column: 2/4;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box blue-box">
+            Blue box
+        </div>
+        <div class="box green-box">
+            Green box
+        </div>
+        <div class="box orange-box">
+            Orange box
+        </div>
+        <div class="box red-box">
+            Red box
+        </div>
+        <div class="box yellow-box">
+            Yellow box
+        </div>
+    </div>
+</body>
+</html>

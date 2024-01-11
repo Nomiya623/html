@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 300px;
+            background-color: #f9f9f9;
+            border: 1px solid black;
+            margin-bottom: 20px;
+            display: flex;
+        }
+        .box{
+            width: 50px;
+            margin: 5px;
+            background-color: tomato;
+            color: white;
+            text-align: center;
+
+        }
+        .flex1{
+            /* flex-wrap: nowrap; */
+            flex-flow: row wrap;
+        }
+        .flex2{
+            flex-wrap: wrap;
+        }
+        .flex3{
+            flex-wrap: wrap-reverse;
+        }
+    </style>
+</head>
+<body>
+    <div class="container flex1">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+    
+    </div>
+    <div class="container flex2">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+    
+    </div>
+    <div class="container flex3">
+        <div class="box">box1</div>
+        <div class="box">box2</div>
+        <div class="box">box3</div>
+        <div class="box">box4</div>
+        <div class="box">box5</div>
+        <div class="box">box6</div>
+    
+    </div>
+</body>
+</html>
