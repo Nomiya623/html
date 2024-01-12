@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            padding: 16px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            /* make image responsive within the container */
+            height: auto;
+        }
+        .grid-item text{
+            font-size: medium;
+            color: white;
+        }
+        /* Media query for screens less than or equal to 600 pixels */
+        @media screen and (max-width: 600px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+                /* stack grid items vertically on small screens */
+            }
+        }
+
+        /* Media query for screens between 601 and 900 pixels */
+        @media screen and (min-width: 601px) and (max-width: 900px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
+                /* adjust number of columns for medium screens */
+            }
+        }
+
+        /* Media query for screens larger than 900 pixels */
+        @media screen and (min-width: 901px) {
+            .grid-container {
+                grid-template-columns: repeat(3, 1fr);
+                /* adjust number of columns for large screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">
+            <div class="grid-item text">
+            <img src="../day5/image/yeti-1.jpg" alt="Image 1"> It's Friday!
+        </div>
+        <div class="grid-item">
+            <img src="../day5/image/yeti-2.jpg" alt="Image 2"> Time to party!
+            </div>
+        </div>
+        <!-- add background color pinkish grey and change text white next to each grid item img-->
+        
+    </div>
+</body>
+
+</html>

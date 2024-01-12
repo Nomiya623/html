@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+
+<body>
+    <button onclick="test()"> Click </button>
+    <button onclick="test2()"> Press Click </button>
+    <button onclick="remove()"> Remove </button>
+    <button onclick="gugudan(3)"> 3dan 출력 </button>
+</body>
+
+</html>
+<script>
+
+    function test() {
+        // String, int 대신 사용, 모든 변수타입 입력 가능
+
+        var name = prompt("이름을 입력하세요:");
+        // alert("Hello");
+        // const, let
+        if (name != null) {
+            alert(name + "님 안녕하세요.");
+        }
+    }
+
+    function test2() {
+        // console.log("안녕하세요" + cnt++);
+        var cnt1 = 1;
+        var cnt2 = "1";
+        if (cnt1 === cnt2) {
+            console.log("같다");
+        } else {
+            console.log("다르다");
+        };
+
+    }
+
+    function remove() {
+        // var flg = confirm("Do you sure want to delete?");
+        if (confirm("Do you sure want to delete?")) {
+            console.log("Removed");
+        } else {
+            console.log("Cancelled");
+        }
+
+    }
+
+    function gugudan(num) {
+        function gugudan(num) {
+            console.log(num + "단 출력");
+            for (let i = 1; i <= 9; i++) {
+                console.log(num + " * " + i + " = " + (num * i));
+            }
+        } gugudan(3);
+    }
+
+</script>
