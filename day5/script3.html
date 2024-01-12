@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <style>
+        h1 {
+            font-size: 16px;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #CCCCCC;
+            height: 1px;
+            margin-bottom: 25px;
+        }
+
+        #styletwo {
+            position: relative;
+            display: block;
+            height: 24px;
+            font-size: 11px;
+            font-weight: bold;
+            background: transparent url(bgOFF.gif) repeat-x top left;
+            font-family: Arial, Verdana, Helvitica, sans-serif;
+        }
+
+        #styletwo ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: auto;
+        }
+
+        #styletwo ul li {
+            display: block;
+            float: left;
+            margin: 0 1px 0 0;
+        }
+
+        #styletwo ul li a {
+            display: block;
+            float: left;
+            color: #000;
+            text-decoration: none;
+            padding: 6px 20px 0 20px;
+            height: 24px;
+        }
+
+        #styletwo ul li a:hover,
+        #styletwo ul li a.current {
+            color: #fff;
+            background: transparent url(bgON.gif) repeat-x top left;
+        }
+    </style>
+</head>
+
+<body>
+    <div class></div>
+    <div class="navbar">
+        <div id="home" class="nav-item">Home</div>
+        <div id="html-css" class="nav-item">HTML/CSS</div>
+        <div id="javascript" class="nav-item">JavaScript</div>
+    </div>
+    
+    <div class="menu-container">
+        <div class="menu" id="home-menu">
+            <!-- Home menu items -->
+        </div>
+        <div class="menu" id="html-css-menu">
+            <!-- HTML/CSS menu items -->
+        </div>
+        <div class="menu" id="javascript-menu">
+            <!-- JavaScript menu items -->
+        </div>
+    </div>
+    
+</body>
+<!--  html code for homepage, add hover to each navbar column,  position left 3 menus when click the each column -->
+</html>

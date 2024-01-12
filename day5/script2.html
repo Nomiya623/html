@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #txt{
+            font-size:20px ;
+            color: rebeccapurple;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="event1()"> Click </button>
+    <div id="txt"> Javascript is mindblowing </div>
+</body>
+</html>
+
+<script>
+    function event1(){
+        // document.write("<div style='color: red;'> Hello, </div");
+        // document.write("<div> Nice to meet you </div>");
+        // document.write("Html is fun");
+        // var obj = document.querySelector("#txt");
+        var obj = document.getElementById("txt");
+
+        obj.style.color = "pink";
+        obj.innerText = "Javascript will make you fail";
+        obj.style.fontSize = "30px";
+        console.log(obj.innerText);
+        console.log(obj.style.fontSize);
+
+    }
+</script>
