@@ -1,24 +1,5 @@
 /* General Styles */
-img {
-  max-width: 100%;
-  height: auto;
-}
 
-/* Responsive styles */
-@media (max-width: 768px) {
-  #topMenu {
-    /* Convert to hamburger menu or vertical layout */
-  }
-
-  #slideShow img {
-    width: auto; /* Make sure images are not wider than the screen */
-  }
-
-  /* Adjust padding/margins for smaller screens */
-  #contents, footer {
-    padding: 10px;
-  }
-}
 
 /* More styles */
 
@@ -28,7 +9,30 @@ img {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Programming</title>
-  <link rel="stylesheet" href="css/style2.css">
+  <!-- <link rel="stylesheet" href="css/style2.css"> -->
+  <style>
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    #topMenu {
+      /* Convert to hamburger menu or vertical layout */
+    }
+  
+    #slideShow img {
+      width: auto; /* Make sure images are not wider than the screen */
+    }
+  
+    /* Adjust padding/margins for smaller screens */
+    #contents, footer {
+      padding: 10px;
+    }
+  }
+  </style>  
+
 </head>
 <body>
   <div id="container">    
