@@ -1,0 +1,178 @@
+<!-- 조건 1. 알림은 모두 alert창을 통해 출력
+조건 2. 아이디를 입력하지 않고 '제출' 버튼을 클릭할 경우 '아이디를 입력해주세요' 알림창 출력
+조건 3. 비밀번호와 비밀번호확인 요소의 값이 일치하지 않을 경우 '비밀번호가 일치하지 않습니다.' 알림창 출력
+조건 4. 이름을 5글자 이상 입력 후 제출 버튼을 클릭할 경우 '이름은 5글자 미만으로 입력해 주세요. 알림창 출력
+조건 5. 오른쪽 상단에 '판매회원으로 가입하기' 버튼 클릭 시 이미지와 같이 '사업자번호' 입력 영역을 추가(빨간색 속성 부여)하고 '회원등급' 영역을 삭제하시오.
+또한, '판매회원으로 가입하기' 버튼의 이름을 '구매회원으로 가입하기'로 수정하시오.
+('구매회원으로 가입하기'로 바뀐 후 버튼을 클릭했을 시에는 아무런 변화가 없어도 상관없음.) -->
+
+
+<!DOCTYPE HTML>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>회원 가입</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #ccc;
+      padding: 20px;
+    }
+
+    #signup {
+      background: #fff;
+      border: 1px solid #222;
+      border-radius: 5px;
+      padding: 20px;
+      width: 400px;
+      margin: 30px auto;
+    }
+    .topBtn{
+      float: right;
+    }
+    #signup fieldset {
+      clear : both;
+      border: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+
+    #signup legend {
+      font-size: 16px;
+      font-weight: bold;
+      padding-left: 5px;
+      padding-bottom: 10px;
+    }
+
+    #signup ul li {
+      line-height: 30px;
+      list-style: none;
+      padding: 5px 10px;
+      margin-bottom: 2px;
+    }
+
+    #signup button {
+      border: 1px solid #222;
+      border-radius: 20px;
+      display: block;
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin: auto;
+      padding: 7px 25px;
+    }
+
+    #signup label {
+      float: left;
+      font-size: 13px;
+      width: 110px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <button id="toggleMemberTypeBtn"> 판매회원으로 가입하기</button>
+  <div id="businessNumber"></div>
+
+  <div id="membershipGrade">
+
+  </div>
+
+  <form id="signup">
+    <div class="topBtn"><button style="border-radius: 0%;">판매회원으로 가입하기</button></div>
+    <fieldset>
+      <legend>로그인 정보</legend>
+      <ul>
+        <li>
+          <label for="userid">아이디</label>
+          <input id="userid" name="userid" type="text" required autofocus>
+        </li>
+        <li>
+          <label for="pwd1">비밀번호</label>
+          <input id="pwd1" name="pwd1" type="password" required>
+        </li>
+        <li>
+          <label for="pwd2">비밀번호 확인</label>
+          <input id="pwd2" name="pwd2" type="password" required>
+        </li>
+        <li>
+          <label for="level">회원 등급</label>
+          <input id="level" name="level" type="text" >
+        </li>
+      </ul>
+    </fieldset>
+    <fieldset>
+      <legend>개인 정보</legend>
+      <ul>
+        <li>
+          <label for="fullname">이름</label>
+          <input id="fullname" name="fullname" type="text" placeholder="5자미만 공백없이" required>
+        </li>
+        <li>
+          <label for="email">메일 주소</label>
+          <input id="email" name="email" type="email" placeholder="abcd@domain.com" required autocomplete="off">
+        </li>
+        <li>
+          <label for="tel">연락처</label>
+          <input id="tel" name="tel" type="tel" autocomplete="off">
+        </li>
+      </ul>
+    </fieldset>
+    
+    <button> 제출 </button>
+    
+  </form>
+</body>
+
+</html>
+
+<script>
+    document.getElementById("submitBtn").addEventListener("click", function(event){
+        var userId = document.getElementById("userId").value;
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementsById("confirmPassword").value;
+        var userName = document.getElementsById("userName").value;
+    
+    // 1~4.
+    if(!userId){
+        alert("아이디를 입력해주세요");
+        event.preventDefault();
+        return;
+    }
+    
+    if(password !== confirmPassword){
+        alert("비밀번호가 일치하지 않습니다.");
+        event.preventDefault();
+        return;
+    }
+
+    if(userName.length > 5){
+        alert("이름을 5글자 미만으로 입력해 주세요.");
+        event.preventDefault();
+        return;
+    }
+    });
+
+    // 5.
+    document.getElementById("toggleMemberTypeBtn").addEventListener("click", function(){
+      var btn = this;
+      var businessNumber =  document.getElementById("businessNumber");
+      var membershipGrade =  document.getElementById("businessNumber");
+
+      if(btn.innerHTML == "판매회원으로 가입하기"){
+        btn.innerHTML = "구매회원으로 가입하기";
+
+        businessNumberContainer.innerHTML = '<input type="text" id="businessNumber" style="border: 1px solid red;" placeholder="사업자번호">';
+      
+        
+      } else{
+        membershipGrade.remove();
+      }
+
+    });
+
+</script>
