@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="makeTable()">Create Table</button>
+    <div id="tableContainer"></div>
+
+    <script>
+        function makeTable() {
+            var table = document.createElement("table");
+            var tableBody = document.createElement("tbody");
+
+            for (var i = 0; i < 3; i++) {
+                var row = document.createElement("tr");
+                for (var j = 0; j < 3; j++) {
+                    var cell = document.createElement("td");
+                    var cellText = document.createTextNode(`Row ${i + 1} Cell ${j + 1}`);
+                    cell.appendChild(cellText);
+                    row.appendChild(cell);
+                }
+                tableBody.appendChild(row);
+            }
+
+            table.appendChild(tableBody);
+            document.getElementById("tableContainer").appendChild(table);
+
+            table.setAttribute("border", "2");
+        }
+    </script>
+</body>
+</html>

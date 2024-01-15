@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개 페이지</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            box-sizing: border-box;
+            background: linear-gradient(to right, #121212, #1c1c1c);
+        }
+
+        /* Sidebar styling */
+        .sidebar {
+            width: 20%;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+
+        /* Main content styling */
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+            }
+            .main-content {
+                flex-grow: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <!-- Real-time element (e.g., clock) goes here -->
+    </div>
+    <div class="main-content">
+        <!-- Main content goes here -->
+    </div>
+
+    <script>
+        // JavaScript for real-time functionality (e.g., updating clock) goes here
+    </script>
+</body>
+</html>

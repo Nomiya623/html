@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>review</title>
+    <style>
+        #txt{
+            font-size: 20px;
+            color: red;
+            font-weight: bold;
+            margin: 20px;
+        }
+        #img{
+            border: 1px solid black;
+            width: 100px;
+            height: 70px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="event1()"> 색변경</button>
+    <div id="txt"> 빨간색 - 파란색 </div>
+
+    <button onclick="event2()">이미지</button>
+    <div><img src="../day6/image/teddy-bear.png" alt="image"></div>
+</body>
+</html>
+<script>
+    function event1(){
+        var obj = document.getElementById("txt");
+        // var obj = document.getElementById("txt").style.color;
+        if(obj.style.color = 'red' || obj.style.color == '' ){
+            obj.style.color = "blue";
+        } else{
+            obj.style.color = "red"; 
+        }
+        
+        // obj.innerText = "빨간색 - 파란색";
+        // obj.style.fontSize = "30px";
+        // console.log(obj.innerText);
+        // console.log(obj.style.fontSize);
+    }
+
+    function event2(){
+        var obj = document.querySelector("#img");
+
+        if(obj.style.display != 'none'){
+            obj.style.display = 'none';
+        } else{
+            obj.style.display = 'block';
+        }
+    
+    }
+</script>

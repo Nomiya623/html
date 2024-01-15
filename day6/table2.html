@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div><input type="text" id="rows" placeholder="행 입력"></div>
+    <div><input type="text" id="cols" placeholder="열 입력"></div>
+    <button onclick="makeTable()">테이블만들기</button>
+    <div id="tbl"></div>
+</body>
+
+</html>
+<script>
+    function makeTable() {
+        var tbl = document.querySelector('#tbl');
+        var rows = document.querySelector('#rows').value;
+        var cols = document.querySelector('#cols').value;
+        var cnt = 1;
+
+        var tblStr = "<table border='1'>";
+        for (var i = 1; i <= rows; i++) {
+            tblStr += "<tr>";
+            for (var j = 1; j <= cols; j++) {
+                tblStr += "<td>" + cnt++ + "</td>";
+            }
+            tblStr += "</tr>";
+        }
+        tblStr += "</table>";
+        tbl.innerHTML = tblStr;
+    }
+</script>

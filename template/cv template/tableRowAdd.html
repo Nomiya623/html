@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Rows: <input type="number" id="rows" min="1" value="2"><br>
+    Columns: <input type="number" id="columns" min="1" value="2"><br>
+    <button onclick="makeTable()">Create Table</button>
+    <div id="tableContainer"></div>
+
+    <script>
+        function makeTable(){
+            var rows = document.getElementById("rows").value;
+            var columns = document.getElementById("columns").value;
+            var table = document.createElement("table");
+            table.style.border = '1px solid black';
+
+            for (var r = 0; r < parseInt(rows); r++) {
+                var row = document.createElement("tr");
+                for (var c = 0; c < parseInt(columns); c++) {
+                    var cell = document.createElement("td");
+                    cell.style.border = '1px solid black';
+                    cell.textContent = `Row ${r + 1} Cell ${c + 1}`;
+                    row.appendChild(cell);
+                }
+                table.appendChild(row);
+            }
+
+            var container = document.getElementById("tableContainer");
+            container.innerHTML = ''; // Clear the previous table
+            container.appendChild(table);
+        }
+    </script>
+</body>
+</html>

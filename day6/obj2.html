@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="num" type="text" placeholder="숫자를입력하세요!">
+    <button onclick="numEx()">클릭</button>
+    <div class="txt">Test</div>
+</body>
+</html>
+<script>
+    function numEx(){
+        // var obj = document.querySelector(".txt");
+        // console.log(obj.innerHTML);
+        // alert(obj.innerHTML);
+        var num = document.querySelector("#num");
+        // console.log(num.val);
+        // console.log(num.innerHTML);
+        // console.log(num.innerText);
+
+        if(num.value % 2 == 0 ){
+            obj.innerHTML= "짝수"; 
+        } else {
+            obj.innerHTML= "홀수"; 
+        }
+    }
+    // let num = prompt("숫자를 입력하세요!");
+
+    // if(num != null){
+    //     document.getElementById("demo").innerHTML = 
+    //     "";
+    // }
+    // if(num.value < 0 || )
+</script>

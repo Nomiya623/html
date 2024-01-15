@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+</head>
+
+<body>
+    <button onclick="openWin()">Open</button>
+    <button onclick="closeWin()">Close</button>
+    <button onclick="popClose()">Close the pop-up</button>
+</body>
+
+</html>
+<script>
+    // document.write("<div> 화면너비" + screen.width + "</div>") ;
+    // document.write("<div> 화면높이" + screen.height + "</div>") ;
+    // document.write("<div> 가능화면너비" + screen.availWidth + "</div>") ;
+    // document.write("<div> 가능화면높이" + screen.availHeight + "</div>") ;
+    function closeWin() {
+        window.close();
+    }
+    // "" 팝업 이름, 동일한 이름 있을경우 팝업 생성하지 않음
+    function openWin() {
+        var left = (screen.availWidth-400) / 2;
+        var top = (screen.availHeight-400) / 2;
+        var position = "left=" + left + ",top=" + top + ",width=400, height=400";
+        // window.open("table.html", "", "width=400, height=400, left=250, top=150");
+        pop = window.open("table.html", "", position);
+    }
+    function popClose(){
+        pop.close();
+    }
+</script>

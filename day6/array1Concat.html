@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrayConcat</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    var arrStr = ["사과", "오렌지", "레몬", "키위"];
+    var arrNum = [1, 2, 3, 4, 5];
+
+    var newArr = arrStr.concat(arrNum);
+    // document.write(arrStr);
+    document.write(newArr);
+
+
+    document.write("<hr>");
+
+    var str = arrStr.join('-');
+    document.write(str);
+    document.write("<hr>");
+
+    arrStr.push("딸기");
+    document.write(arrStr);
+    document.write("<hr>");
+
+    // arrStr.push(2,"귤");
+    // document.write(arrStr);
+    // document.write("<hr>");
+
+    // arrStr.unshift("귤");
+    // document.write(arrStr);
+    // document.write("<hr>");
+    // // 맨 마지막 값이 빠져나간다
+    // arrStr.pop();
+    // document.write(arrStr);
+    // document.write("<hr>");
+
+    // arrStr.shift("귤");
+    // document.write(arrStr);
+    // document.write("<hr>");
+
+    // arrNum.splice(4);
+    // document.write(arrNum);
+    // document.write("<hr>");
+
+    // var newNum = arrNum.splice(2,1);
+    // document.write("arrNum == " + arrNum + "<br>");
+    // document.write("arrNum == " + newNum + "<br>");
+
+
+
+    // for(var i=0; i<arr.length; i++){
+    //     document.write(arr[i] +"-");
+    // }
+
+
+    newArr = arrNum.slice(2);
+    document.write(newArr + "<br>");
+
+    newArr = arrNum.slice(2,4);
+    document.write(newArr + "<br>");
+</script>
