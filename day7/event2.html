@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .txt{
+            color: brown;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        #bear {
+            width: 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <div> <img src="../day5/image/yeti-1.jpg" id="bear"></div>
+    
+</body>
+</html>
+<script>
+    // shorten e=event;
+    var bear = document.querySelector('#bear');
+    bear.onclick = function(event){
+        // alert("event type:" + event.type);
+        alert("click location:" + event.pageX + "," + event.pageY);
+        console.log(event);
+        this.src;
+        bear.src;
+    }
+</script>

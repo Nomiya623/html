@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>현재 시간 표시</title>
+    <style>
+
+        #currentTime {
+            color: red;
+            font-size: 24px;
+        }
+        div{
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="showCurrentTime()">현재 시간 표시 빨간색으로 표시하기</button>
+    <div><h2>현재시간</h2></div>
+    <div id="currentTime"></div>
+</body>
+
+</html>
+<script>
+    function showCurrentTime() {
+        var now = new Date();
+        var timeString = now.toLocaleTimeString();
+        document.getElementById("currentTime").innerText = timeString;
+    }
+    setInterval(showCurrentTime, 1000);
+</script>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>구구단 출력</title>
+    <style>
+        #multiplicationTable {
+            color: blue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="number" id="numberInput" placeholder="숫자 입력">
+    <button onclick="generateMultiplicationTable()">구구단 출력</button>
+    <div id="multiplicationTable"></div>
+
+    <script>
+        function generateRandomColor() {
+            var red = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var blue = Math.floor(Math.random() * 256);
+            return `rgb(${red}, ${green}, ${blue})`; // RGB 색상 문자열 반환
+        }
+
+        function generateMultiplicationTable() {
+            var number = document.getElementById("numberInput").value;
+            var tableHTML = "";
+
+            for (var i = 1; i <= 9; i++) {
+                var color = generateRandomColor(); // 각 줄에 대한 랜덤 색상
+                tableHTML += `<span style="color: ${color};">${number} x ${i} = ${number * i}</span><br>`;
+            }
+
+            document.getElementById("multiplicationTable").innerHTML = tableHTML;
+        }
+
+    </script>
+</body>
+
+</html>

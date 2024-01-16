@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time display</title>
+    <style>
+        #currenttime{
+            color: red;
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div id="currentTime">
+        현재시각:
+    </div>
+</body>
+</html>
+<script>
+    function showCurrentTime(){
+        var now = new Date();
+        var time = now.toLocaleTimeString();
+
+    document.getElementById("currenTime").innerText = time;
+    } 
+
+    setInterval(showCurrentTime, 1000);
+
+    
+</script>

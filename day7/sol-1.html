@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .todo-list li{
+            color: black;
+            cursor: pointer;
+            list-style-type: none;
+        }
+        .completed{
+            color:red;
+            text-decoration: line-through;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>할 일 목록</h2>
+    <ul class="todo-list">
+        <li onclick="toggleTodo(this)">&check; 할 일1</li>
+        <li onclick="toggleTodo(this)">&check; 할 일2</li>
+        <li onclick="toggleTodo(this)">&check; 할 일3</li>
+        <li onclick="toggleTodo(this)">&check; 할 일4</li>
+        <li onclick="toggleTodo(this)">&check; 할 일5</li>
+    </ul>
+<script>
+    function toggleTodo(element){
+        element.classList.toggle('completed');
+    }
+</script>
+
+</body>
+</html>
+
+

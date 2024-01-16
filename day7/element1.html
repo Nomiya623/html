@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element1</title>
+</head>
+<body>
+    <div class="sub">Subject Name</div>
+    <ul>
+        <li class="sub">java</li>
+        <li>oracle</li>
+        <li class="sub">html/css</li>
+        <li>javascript</li>
+    </ul>
+</body>
+</html>
+<script>
+    // var list = document.querySelector>querySelectorAll('.sub');
+   
+    var list = document.querySelectorAll('li');
+    console.log(list);
+    for(var i=0; i<list.length; i++){
+        // list.item(i).style.color = 'red';
+        // subclass에만 적용
+        list[i].style.color = 'red';
+
+    }
+    // list.style.color = 'red';
+    
+</script>

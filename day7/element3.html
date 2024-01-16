@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="cup">
+    </div>
+    <div>
+        <button onclick="createImg()">이미지 생성</button>
+    </div>
+</body>
+</html>
+<script>
+    function createImg(){
+        var img = document.createElement("img");
+        var imgSrc = document.createAttribute("src");
+        imgSrc.value = "../day4/image/cup-1.jpg";
+        //<img>
+        
+        img.setAttributeNode(imgSrc);
+        // src=""
+        document.getElementById("cup").appendChild(img);
+        console.log(img);
+    }
+</script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sub" id="subject">
+        Subject Name</div>
+    <ul id="list">
+        <li class="sub" id="java">Java</li>
+        <li id="oracle">Oracle</li>
+        <li class="sub">Html/css</li>
+        <li>Javascript</li>
+    </ul>
+    <input type="text" id="subvalue" placeholder="Enter the subject.">
+    <div><button onclick="addSub"()>Add</button></div>
+</body>
+</html>
+<script>
+    // var obj = document.getElementById('subject');
+    // console.log(obj.firstChild.nodeValue);
+
+    // var obj = document.getElementById('list').childNodes;
+    // obj[1].firstChild.nodeValue = "Java Programming";
+    // for(var i=0; i<obj.length; i++){
+    //     console.log(obj[i] + "===> " + obj[i].nodeType);
+    // }
+    function addSub(){
+        var obj = document.getElementById('list');
+        var jsp = document.createElement("li");
+        var jsp = document.querySelector('#subValue');
+        // obj.appendChild(java);
+       
+        // jsp.innerHTML = "JSP!";
+        jsp.appendChild(document.createTextNode(subvalue));
+        console.log(jsp);
+        obj.appendChild(jsp);
+    }
+</script>

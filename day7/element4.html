@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="link">
+    </div>
+    <div>
+        <button onclick="createLink()">Create a Google.com link </button>
+    </div>
+</body>
+</html>
+<script>
+    function createLink(){
+        // <a href="https://www.google.com/">Google</a>==> refer
+        var link = document.createElement("a");
+        var linkSrc = document.createAttribute("href");
+        linkSrc.value = "https://www.google.com/";
+        link.innerHTML = "Google";
+        link.setAttributeNode(linkSrc);
+        document.getElementById("link").appendChild(link);
+        // console.log(link);
+    }
+</script>

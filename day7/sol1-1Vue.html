@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Todo List</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <style>
+        .todo-item {
+            color: black;
+            cursor: pointer;
+            list-style-type: none;
+            
+        }
+        .completed {
+            color: grey;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <h2>할일목록</h2>
+        <ul>
+            <li v-for="(todo, index) in todos" 
+                :key="index" 
+                :class="{ 'todo-item': true, 'completed': todo.completed }" 
+                @click="toggleTodo(index)">&check; {{ todo.text }}</li>
+        </ul>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                todos: [
+                    { text: '할일1', completed: false },
+                    { text: '할일2', completed: false },
+                    { text: '할일3', completed: false },
+                    { text: '할일4', completed: false },
+                    { text: '할일5', completed: false }
+                ]
+            },
+            methods: {
+                toggleTodo: function(index) {
+                    this.todos[index].completed = !this.todos[index].completed;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

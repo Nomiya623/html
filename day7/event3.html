@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+
+<body>
+    <img src="../day4/image/cup-1.jpg" id="cup">
+</body>
+
+</html>
+<script>
+    var cup = document.querySelector('#cup');
+    // cup.addEventListener("mouseover", img1);
+    // cup.addEventListener("mouseout", img2);
+
+    cup.addEventListener("mouseover",
+        function img1() {
+            cup.src = '../day4/image/cup-2.jpg';
+        }
+    );
+    cup.addEventListener("mouseout",
+        function img2() {
+            cup.src = '../day4/image/cup-1.jpg';
+        }
+    );
+    // function img1(){
+    //     cup.src = '../day4/image/cup-2.jpg';
+    // }
+    // function img2(){
+    //     cup.src = '../day4/image/cup-1.jpg';
+    // }
+    // 
+</script>

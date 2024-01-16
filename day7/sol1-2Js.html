@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List with Checkmarks</title>
+    <style>
+        .todo-list li {
+            cursor: pointer;
+            color: black;
+            list-style-type: none; 
+        }
+        .todo-list li:before {
+            content: '\2713\0020'; 
+            color: black; 
+        }
+        .completed {
+            color: grey;
+            text-decoration: line-through;
+        }
+    </style>
+</head>
+<body>
+    <h2>할일목록</h2>
+    <ul class="todo-list">
+        <li onclick="toggleTodo(this)">할 일1</li>
+        <li onclick="toggleTodo(this)">할 일2</li>
+        <li onclick="toggleTodo(this)">할 일3</li>
+        <li onclick="toggleTodo(this)">할 일4</li>
+        <li onclick="toggleTodo(this)">할 일5</li>
+    </ul>
+
+    <script>
+        // 초기 할 일 항목
+        const todos = ["할일1", "할일2", "할일3", "할일4", "할일5"];
+
+        
+        function addTodoItem(todo) {
+            const list = document.querySelector('.todo-list');
+            const listItem = document.createElement('li');
+            listItem.textContent = todo;
+            listItem.onclick = function() {
+                this.classList.toggle('completed');
+            };
+            list.appendChild(listItem);
+        }
+
+
+        todos.forEach(todo => addTodoItem(todo));
+    </script>
+</body>
+</html>

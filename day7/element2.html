@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="sub">Subject Name</div>
+    <ul>
+        <li class="oracle">Java</li>
+        <li id="oracle">Oracle</li>
+        <li class="sub">html/css</li>
+        <li>javascript</li>
+    </ul>
+</body>
+</html>
+<script>
+    // var list = document.getElementsByTagName('list');
+    // for(var i=0; i<list.length; i++){
+    //     list[i].style.color = 'red';
+    // }
+    // var obj = document.getElementById('oracle');
+    // obj.style.color = 'red';
+
+    var list = document.getElementsByClassName('sub');
+    for(var i=0; i<list.length; i++){
+        list[i].style.color = 'red';
+    }
+
+</script>

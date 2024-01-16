@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 :style="textStyle">
+            {{ message }}
+        </h1>
+        <button @click="toggleMessage">클릭</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                message: '안녕',
+                isAnnyeong: true
+            },
+            computed: {
+                textStyle: function() {
+                    return {
+                        color: this.isAnnyeong ? 'red' : 'black'
+                    };
+                }
+            },
+            methods: {
+                toggleMessage: function() {
+                    this.isAnnyeong = !this.isAnnyeong;
+                    this.message = this.isAnnyeong ? '안녕' : '하세요';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

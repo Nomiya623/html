@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 출력</title>
+    <style>
+        #multiplicationTable{
+            color: blue;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <input type="num" id="numInput" placeholder="숫자 입력하세요.">
+    <button onclick="generateMultiplicationTable()">구구단 출력</button>
+    <div id="multiplicationTable"></div>
+
+    <script>
+        function generateMultiplicationTable(){
+            var num = document.getElementById("numInput").value;
+            var table = "";
+    
+            for (var i = 1; i <= 9; i++) {
+            table += num + " x " + i + " = " + (num * i) + "<br>"; 
+        }
+        document.getElementById("multiplicationTable").innerHTML = table;
+    }
+    </script>
+
+</body>
+</html>
+
