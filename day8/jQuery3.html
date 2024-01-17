@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="txt1">Hello</div>
+    <button>Click</button>
+    <div id="txt2"></div>
+</body>
+
+</html>
+
+<script>
+    // jQuery(function(){
+    //     jQuery("div").on("click", function(){
+    //         jQuery("div").css("color", "red");
+    //     })
+    // });
+    $(function () {
+        $("button").on("click", function(){
+            $("#txt1").html();
+            $("#txt2").html($("#txt1").html()).css("color","blue").css("backgroundColor", "grey");
+            console.log($("#txt2").css("color"));
+        })
+    });
+</script>

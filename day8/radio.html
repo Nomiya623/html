@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* button */
+    </style>
+</head>
+
+<body>
+    <!-- radio 중복이 안됨 -->
+    <input type="radio" value="java" name="subject"> <span>Java</span> <br>
+    <input type="radio" value="oracle" name="subject"> <span>Oracle</span> <br>
+    <input type="radio" value="html/css/javascript" name="subject"> <span>html/css/javascript</span><br>
+    <input type="radio" value="jquery" name="subject"> <span>jQuery</span><br>
+
+    <!-- <input type="text"><br> -->
+    <button>Click</button>
+
+    <img id="subjectImage" style="max-width: 300px; display: none;">
+</body>
+
+</html>
+
+<script>
+
+    // $(function () {
+    //     var list = $('li');
+    //     $("button").on("click", function () {
+    //         console.log($("input[name = 'subject']):checked").val());
+    //     })
+    // });
+
+
+// my answer
+    $(function () {
+        $("button").on("click", function () {
+            var selectedSubject = $("input[name='subject']:checked").val();
+            var imageUrl = "";
+
+            switch (selectedSubject) {
+                case "java":
+                    imageUrl = "../day4/image/cup-1.jpg";
+                    break;
+                case "oracle":
+                    imageUrl = "../day4/image/cup-2.jpg";
+                    break;
+                case "html/css/javascript":
+                    imageUrl = "../day4/image/cup-3.jpg";
+                    break;
+                case "jquery":
+                    imageUrl = "../day4/image/cup-4.jpg";
+                    break;
+                default:
+                    imageUrl = ""; 
+            }
+
+            if (imageUrl) {
+                $("#subjectImage").attr("src", imageUrl).show();
+            } else {
+                $("#subjectImage").hide();
+            }
+        });
+    });
+
+
+    // lecture answer
+    $(function () {
+        $("button").on("click", function () {
+            var subject = $("input[name='subject']:checked").val();
+            var img = $("img");
+            img.css("display", "inline");
+        
+            if (subject == "html") {
+                img.attr("stc","../day4/image/cup-1.jpg");
+            } else if(subject == "oracle") {
+                img.attr("stc","../day4/image/cup-2.jpg");
+            } else if(subject == "java") {
+                img.attr("stc","../day4/image/cup-3.jpg");
+            } else if(subject == "jquery") {
+                img.attr("stc","../day4/image/cup-4.jpg");
+            }
+        })
+    });
+
+</script>

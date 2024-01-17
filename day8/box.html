@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img {
+            width: 300px;
+        }
+
+        .div {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="../day8/image/box.jpg" alt="box">
+    <div><button>Click</button></div>
+    <div id="txt"></div>
+</body>
+
+</html>
+<script>
+
+    $(function () {
+        $("button").on("click", function () {
+            // Change the source of the image
+            $("img").attr("src", "../day8/image/box2.jpg");
+
+            // Update the text to display the new image source
+            var link = $("img").attr("src");
+            $("#txt").html(link);
+        });
+    });
+</script>

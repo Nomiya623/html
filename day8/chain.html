@@ -43,8 +43,12 @@
 
             // var txt = $('#java').html();
             // $("#txt").html(txt);
-            $("#subject_kor").find("li").eq(1).css("color", "red");
-
+            $("#subject_kor")
+            .find("li")
+            .eq(1).css("color", "red")
+            .end()
+            .eq(3).css("color", "red");
+           
         })
        $(document).ready(function(){
             $("button").click(function(){

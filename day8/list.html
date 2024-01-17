@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>First Jquery</div>
+    <ul id="list">
+        <li id="java">Java</li>
+        <li>Oracle</li>
+        <li>Html/css</li>
+        <li>Javascript</li>
+        <li>jQuery</li>
+    </ul>
+    <div id="txt"></div>
+    <input type="text" id="inputTxt">
+    <button>Click</button>
+</body>
+
+</html>
+
+<script>
+// my answer
+    $(function () {
+        $("button").on("click", function () {
+            // Get the value from the input field
+            var inputVal = $("#inputTxt").val().trim();
+
+            // Check if the input is not empty
+            if(inputVal) {
+                // Add a new list item at the end of the list
+                $("#list").append("<li>" + inputVal + "</li>");
+
+                // Clear the input field
+                $("#inputTxt").val("");
+            }
+        });
+    });
+// Lecture Version [object HTMLDivElement] = txt
+    $(function () {
+        var list = $("li");
+        // var text= $("input").val();
+        $("button").on("click", function () {
+            $("#list").append("<li>" + $("input").val() + "</li>")
+        })
+    });
+
+    $(function () {
+        $("button").on("click", function () {
+            var text = $("input").val();
+            // $("#java").appendTo("#list");-> uses in child nodes
+
+            // before, after
+            $("#java").before("<li>" + txt + "</li>");
+        })
+    });
+
+
+</script>
