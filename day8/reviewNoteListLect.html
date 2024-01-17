@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-straight/css/uicons-thin-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-bold-straight/css/uicons-bold-straight.css'>
+
+    <title>Memo</title>
+    <style>
+        #container {
+            width: 500px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        li {
+            list-style: none;
+        }
+       
+    </style>
+
+</head>
+<body>
+<div id="container">
+    <h2><i class="fi fi-rr-memo-circle-check" style="margin: 10px;"></i>메모장</h2>
+    <input type="text" id="txt" autofocus>
+    <button onclick="add();" >Add</button>
+
+    <hr>
+    <ul id="itemList">
+    </ul>
+</div>   
+</body>
+</html>
+<script>
+    function add() {
+        var newItem = document.createElement("li");
+        var txt = document.querySelector("#txt");
+        newItem.innerHTML = txt.value + ' <i class="fi fi-rr-checkbox"></i>';
+        var itemList = document.querySelector("#itemList");
+        itendChild(nemList.appewItem); 
+        document.querySelector("#txt").value = "";
+
+        // newItem.addEventListener('click', function() {
+        // alert(this.innerHTML);
+        // this.parentNode.removeChild(this);
+        // })
+        
+        var list = document.querySelectorAll('i');
+        for(var i=0; i<list.length; i++){
+            list[i].onclick = function(){
+                this.parentNode.remove();
+            }
+        }
+        // console.log(i);
+    }
+
+</script>

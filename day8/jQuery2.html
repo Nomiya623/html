@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>First Jquery</div>
+    <ul>
+        <li>Java</li>
+        <li><span>Oracle</span></li>
+        <li>Html/css</li>
+        <li>Javascript</li>
+        <li>jQuery</li>
+    </ul>
+    <div id="txt"></div>
+    <button>Click</button>
+</body>
+
+</html>
+
+<script>
+    // jQuery(function(){
+    //     jQuery("div").on("click", function(){
+    //         jQuery("div").css("color", "red");
+    //     })
+    // });
+    $(function () {
+        var list = $('li');
+        // var list =document.querySelector('li');
+        $("button").on("click", function () {
+            //    $("div").css("backgroundColor", "violet");
+            //    $("#txt").text(list.length);
+            $("li:eq(1)").css("color", "red");
+            //    2인덱스보다 큰 값 출력
+            $("li:gt(2)").css("color", "red");
+            //    반대로
+            $("li:lt(1)").css("color", "red");
+            $("li:first").css("color", "blue");
+            $("li:last").css("color", "blue");
+            //    index=odd, even
+            $("li:odd").css("color", "yellow");
+            $("li:even").css("color", "brown");
+            //   li:has(span), 
+            $("li:has(span)").css("color", "violet");
+            $("li:contains(r)").css("color", "green");
+            $("li:empty").css("color", "green");
+            $("li:parent").css("color", "orange");
+            $("li:eq(1)").next().css("border", "1px solid blue");
+        })
+    });
+</script>

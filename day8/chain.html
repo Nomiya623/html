@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="subject_kor">
+        <li id="java">자바</li>
+        <li><span>오라클</span></li>
+        <li>Html/css</li>
+        <li><span>자바스크립트</span></li>
+        <li>제이쿼리</li>
+    </ul>
+    <ul id="subject_en">
+        <li id="java">Java</li>
+        <li><span>Oracle</span></li>
+        <li>Html/css</li>
+        <li><span>Javascript</span></li>
+        <li>jQuery</li>
+    </ul>
+    <div id="txt"></div>
+    <button>Click</button>
+    <p>
+        This is a paragraph with little content.
+    </p>
+</body>
+
+</html>
+
+<script>
+
+    $(function () {
+
+        $("button").on("click", function () {
+            // $('#java').html("<h1>JAVA</h1>");
+            // getName(); 파라미터 받지 않음
+            // setName("Hong");
+
+            // var txt = $('#java').html();
+            // $("#txt").html(txt);
+            $("#subject_kor").find("li").eq(1).css("color", "red");
+
+        })
+       $(document).ready(function(){
+            $("button").click(function(){
+                $("p").toggle();
+            });
+       }); 
+    });
+</script>

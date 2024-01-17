@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* input{
+            display: block;
+        } */
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" value="java" name="subject"> <span>Java</span> <br>
+    <input type="checkbox" value="oracle" name="subject"> <span>Oracle</span> <br>
+    <input type="checkbox" value="html/css/javascript" name="subject"> <span>html/css/javascript</span>
+    <input type="checkbox" value="jQuery" name="subject"> <span>jQuery</span>
+
+    <button>Click</button>
+</body>
+
+</html>
+
+<script>
+
+    $(function () {
+        var list = $('li');
+        $("button").on("click", function () {
+            $(":checkbox").next().text("Checked");
+            $(":text").next().text("Checked");
+        })
+    });
+</script>
