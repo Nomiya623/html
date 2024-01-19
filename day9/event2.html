@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <a href="http://www.naver.com">
+        <img src="../day4/image/cup-1.jpg" alt="cup">
+    </a>
+    
+    <div id="txt"></div>
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("a").on("click", function (e) { 
+                e.preventDefault();
+                alert("클릭했다!")
+            })
+    });
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><h1>Image</h1></div>
+    <img src="../day4/image/cup-1.jpg" alt="cup">
+</body>
+</html>
+<script>
+    $(function(){
+        $("img").on({
+            "click" : function(){
+                $("#txt").append("<div style='color:red;'>클릭/div>")
+            },
+            "mouseover" :function(){
+                $("#txt").append("<div style='color:blue;'>클릭/div>")
+            },
+            "mouseout" :function(){$("#txt").append("<div style='color:gray;'>클릭/div>")},
+        });
+
+        $("img").on("mouseenter", function(){
+            $("#txt").append("<div>마우스를 올렸다</div>")
+        });
+
+        $("img").on("mouseover mouseout", function(){
+            $("#txt").append("<div>이벤트가 발생했다</div>")
+        })
+
+        $("img").on("mouseleave", function(){
+            $("#txt").append("<div>마우스를 내렸다</div>")
+        })
+    });
+</script>

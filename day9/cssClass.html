@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .txt{
+            color: red;
+            font-size: 200%;
+        }
+
+        .txt2{
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div id="txt">Hello</div>
+    <button>Click</button>
+    <img src="../day8/image/box.jpg" alt="box">
+</body>
+</html>
+<script>
+    $(function(){
+        $("button").on("click", function(){
+            // font-size 문법도 출력 가능
+            // $("#txt")
+            //     .css("color", "red")
+            //     .css("fontSize", "30px");
+            // $("#txt").css({"color": "red", "fontSize": "200%"});
+            $("#txt").toggleClass("txt");
+            // console.log($("#txt").hasClass("txt"));
+            $("#txt").addClass("txt");
+            $("#txt").removeClass("txt");
+            
+            $("#txt").removeAttr("src")
+
+        })
+    });
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input checked id="java" type="checkbox" value="java" name="subject"> <span>Java</span> <br>
+    <input id="oracle" type="checkbox" value="oracle" name="subject"> <span>Oracle</span> <br>
+    <input id="html" type="checkbox" value="html/css/javascript" name="subject"> <span>html/css/javascript</span><br>
+    <input type="checkbox" value="jquery" name="subject"> <span>jQuery</span><br>
+
+    <input type="text"><br>
+    <button>Click</button>
+
+    <img id="subjectImage" style="max-width: 300px; display: none;">
+</body>
+
+</html>
+
+<script>
+    $(function () {
+        $("input[name='subject']").on("click", function () {
+            // alert($(this).val());
+            alert($(this).prop("checked"));
+            $("#java").removeProp("checked", false);
+            $("#oracle").removeProp("checked, truw");
+        });
+    });
+
+
+</script>

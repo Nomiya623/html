@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div><h1>목록</h1></div>
+    <input type="checkbox" value="java" name="subject"> <span>Java</span> <br>
+    <input type="checkbox" value="oracle" name="subject"> <span>Oracle</span> <br>
+    <input type="checkbox" value="html/css/javascript" name="subject"> <span>html/css/javascript</span><br>
+    <input type="checkbox" value="jquery" name="subject"> <span>jQuery</span><br>
+
+    <button>Click</button>
+    <h2>추가된 목록</h2>
+    <ul id="addedList"></ul>
+</body>
+</html>
+<script>
+    // 1. '목록'radio 방식이 아닌 check function으로 출력
+    // 2. checkbox 클릭된 목록, 밑에 '추가된 목록' 에 출력 
+    // 3. 추가된 목록을 다음 줄에 'subject가 추가되었다'이벤트로 출력
+    document.querySelector('button').addEventListener('click', function() {
+        var selectedSubjects = document.querySelectorAll('input[name="subject"]:checked');
+        var addedList = document.getElementById('addedList');
+
+        // Clear the current list
+        addedList.innerHTML = '';
+
+        selectedSubjects.forEach(function(subject) {
+            var li = document.createElement('li');
+            li.textContent = subject.value + '가 추가되었습니다.';
+            addedList.appendChild(li);
+        });
+    });
+    </script>
