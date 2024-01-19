@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Positioned Boxes</title>
+<style>
+  .parent-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Aligns children at the start, middle, and end of the line */
+    align-items: stretch; /* Stretches children to fit the height of the box */
+    position: relative; /* Allows absolute positioning relative to this box */
+    width: 80%; /* Width of the parent box */
+    height: 500px; /* Height of the parent box, adjust as needed */
+    margin: 20px auto; /* Center the box horizontally */
+    background-color: #f0f0f0; /* Color of the parent box */
+    padding: 10px; /* Padding inside the parent box */
+  }
+
+  .box {
+    background-color: #0099CC; /* Color of the boxes */
+    color: white;
+    padding: 20px;
+    margin: 10px; /* Margin around boxes */
+    width: 100px; /* Width of the boxes, adjust as needed */
+    height: 100px; /* Height of the boxes, adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Include padding and border in the box's size */
+  }
+
+  #box1 {
+    align-self: flex-start; /* Align to the top */
+    order: 1;
+  }
+
+  #box2 {
+    align-self: center; /* Align to the center */
+    order: 2;
+    margin: auto; /* This centers it both vertically and horizontally */
+  }
+
+  #box3 {
+    align-self: flex-end; /* Align to the bottom */
+    order: 3;
+    margin-left: auto; /* This aligns it to the right */
+  }
+</style>
+</head>
+<body>
+
+<div class="parent-box">
+  <div class="box" id="box1">box1</div>
+  <!-- Box2 is intentionally left out here to add it later with absolute positioning -->
+  <div class="box" id="box3">box3</div>
+</div>
+
+<!-- Box2 is positioned absolutely within the parent box -->
+<div class="box" id="box2" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">box2</div>
+
+</body>
+</html>

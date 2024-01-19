@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        /* button */
+        button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+        /* 취소 버튼 */
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* 회원가입 아바타 */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+            position: relative;
+        }
+
+        img.avatar {
+            width: 30%;
+            border-radius: 50%;
+        }
+
+        .container {
+            padding: 16px;
+        }
+
+        span.psw {
+            float: right;
+            padding-top: 16px;
+        }
+
+        /* 모달 사이즈*/
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+            padding-top: 50px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+
+            border: 1px solid #888;
+            width: 60%;
+        }
+
+        /* 닫기 X 버튼 */
+        .close {
+            position: absolute;
+            right: 25px;
+            top: 0;
+            color: #000;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            cursor: pointer;
+        }
+
+        /* 팝업 애니메이션 */
+        .animate {
+            -webkit-animation: animatezoom 0.6s;
+            animation: animatezoom 0.6s
+        }
+
+        @-webkit-keyframes animatezoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes animatezoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* 미디어쿼리 */
+        @media screen and (max-width: 768px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .modal-content {
+                width: 50%;/
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>사이트 가입 Form</h2>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">회원가입</button>
+
+    <div id="id01" class="modal">
+
+        <form class="modal-content animate" action="/action_page.php" method="post">
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                    title="Close Modal">&times;</span>
+                <img src="../exam/img/profile.png" alt="Avatar" class="avatar">
+            </div>
+
+            <div class="container">
+                <label for="uname"><b>아이디</b></label>
+                <input type="text" placeholder="아이디를 입력해주세요" name="uname" required>
+
+                <label for="psw"><b>비밀번호</b></label>
+                <input type="password" placeholder="비밀번호를 입력해주세요" name="psw" required>
+
+                <label for="psw-repeat"><b>비밀번호 확인</b></label>
+                <input type="password" placeholder="비밀번호를 재입력해주세요" name="psw-repeat" required>
+
+                <label for="name"><b>이름</b></label>
+                <input type="text" placeholder="이름" name="name" required>
+
+                <label><b>성별</b></label>
+                <div>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">남성</label>
+
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">여성</label>
+
+                </div>
+
+                <label><b>취미</b></label>
+                <div>
+                    <input type="checkbox" id="music" name="hobby" value="음악">
+                    <label for="music">음악</label>
+
+                    <input type="checkbox" id="movie" name="hobby" value="영화">
+                    <label for="movie">영화</label>
+
+                    <input type="checkbox" id="reading" name="hobby" value="독서">
+                    <label for="reading">독서</label>
+                </div>
+                <div style="margin: 40px 0px ;">
+                    <label for="referral"><b>가입경로</b></label>
+                    <select name="referral" id="referral">
+                        <option value="">선택하세요</option>
+                        <option value="sns">SNS</option>
+                        <option value="website">웹사이트</option>
+                        <option value="friend">친구 추천</option>
+                        <option value="other">기타</option>
+                    </select>
+                </div>
+
+                <button type="submit">가입하기</button>
+                <label>
+                    <input type="checkbox" checked="checked" name="remember"> Remember me
+                </label>
+
+
+
+
+            </div>
+        </form>
+    </div>
+
+    <script>
+        var modal = document.getElementById('id01');
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

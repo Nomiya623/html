@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +12,7 @@
             font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
+            /* display: flex; */
             height: 100vh;
             box-sizing: border-box;
             background: linear-gradient(to right, #121212, #1f1f1f);
@@ -35,7 +36,7 @@
 
         .sidebar.white {
             background-color: #2c2c2c;
-            width: 65%;
+            width: 63%;
             overflow-y: auto;
         }
 
@@ -68,6 +69,7 @@
             border-radius: 20px;
             display: inline-block;
         }
+
 
         .sidebar.grey nav ul {
             list-style-type: disc;
@@ -152,125 +154,209 @@
                 height: 100px;
             }
         }
-        .time{
+
+        .time {
             color: #bbbbbb;
+        }
+
+        .clickable-section {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .skill-item {
+            text-align: center;
+        }
+
+        .skill-item img {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .skill-detail {
+            color: #ffffff;
+            font-size: 1em;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        #current-time {
+            font-size: 1.2em;
         }
     </style>
 </head>
 
 <body>
     <!-- 회색 사이드바 -->
-    <div class="sidebar grey">
+    <div style="display: flex;">
+        <div class="sidebar grey" style="display: inline-block;">
 
-        <div class="profile">
-            <img src="../day2/image/dog.jpg" alt="프로필 사진">
-            <h1>알리야</h1>
-            <p>프로그래밍 재밌겠죠?</p>
+            <div class="profile">
+                <img src="../day2/image/dog.jpg" alt="프로필 사진">
+                <h1>알리야</h1>
+                <p>프로그래밍 재밌겠죠?</p><br>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#intro">자기소개</a></li>
+                    <li><a href="#experience">경험</a></li>
+                    <li><a href="#skills">보유 기술</a></li>
+                    <li><a href="#education">교육</a></li>
+                </ul><br>
+            </nav>
+            <div>
+                <h2>Contact Me</h2>
+                <div>
+                    <a href="https://github.com/Nomiya623" target="_self">
+                        <img src="../day2/image/github-mark-white.png" alt="GitHub"
+                            style="width: 60px; height: 60px;"><br>
+                        <a href="https://github.com/Nomiya623" target="_blank" class="github-text">GitHub</a>
+                    </a>
+                </div><br>
+                <div>
+                    <p class="email">aliya@naver.com</p><br>
+                    <a href="http://naver.com" class="sns-button">SNS</a>
+                </div>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="#intro">자기소개</a></li>
-                <li><a href="#experience">경험</a></li>
-                <li><a href="#skills">보유 기술</a></li>
-                <li><a href="#education">교육</a></li>
-            </ul>
-        </nav>
-        <div>
-            <p class="email">aliya@naver.com</p>
-            <a href="http://naver.com" class="sns-button">SNS</a>
+        <!-- 흰색 사이드바 -->
+        <div class="sidebar white" style="display: inline-block;">
+            <!-- 자기소개 섹션 -->
+            <div class="section">
+                <div id="intro" class="section clickable-section">
+                    <h2>자기소개</h2>
+                    <p>프론트엔드 개발의 열정이 있는 개발자입니다.<br>항상 새로운 것을 배우며 성장하는 것을 즐깁니다.</p>
+                </div>
+            </div>
+            <!-- 경험 section -->
+            <div class="section">
+                <div id="experience" class="section section clickable-section">
+                    <h2>경험</h2>
+                    <ul>
+                        <li>프론트엔드
+                            <ol>
+                                <li>html/css/javascript</li>
+                                <li>웹페이지 잘 만들고 싶음</li>
+                                <li>다 잘하고 싶음</li>
+                            </ol>
+                        </li>
+                        <li>백엔드
+                            <ol>
+                                <li>자바 잘 못함</li>
+                                <li>오라클 더 잘 못함</li>
+                                <li>자바스크립트 자신 없음</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 보유 기술 section -->
+            <div class="section">
+                <div id="skills" class="section clickable-section">
+                    <h2>보유 기술</h2>
+                    <div class="skills-container">
+                        <div class="skill-item">
+                            <img src="../day2/image/java.png" alt="Java">
+                            <div class="skill-detail">자바</div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="../day2/image/oracle.png" alt="Oracle">
+                            <div class="skill-detail">오라클</div>
+                        </div>
+                        <div class="skill-item">
+                            <img src="../day2/image/java-script.png" alt="JavaScript">
+                            <div class="skill-detail">자바스크립트</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 교육 section -->
+            <div class="section">
+                <div id="Education" class="section clickable-section">
+                    <h2>교육</h2>
+                    <table>
+                        <tr>
+                            <th>학교 이름</th>
+                            <th>전공</th>
+                            <th>기간</th>
+                            <th>구분</th>
+                        </tr>
+                        <tr>
+                            <td>한국대학교</td>
+                            <td>국제통상</td>
+                            <td>2014 - 2019.2</td>
+                            <td>졸업</td>
+                        </tr>
+                        <tr>
+                            <td>외국학교</td>
+                            <td>종합학교</td>
+                            <td>2001 - 2012.2</td>
+                            <td>졸업</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="section">
+                <div id="attach" class="section clickable-section">
+                    <h2>포트폴리오</h2>
+                    <iframe src="없음.pdf" width="100%" height="500px"></iframe>
+                </div>
+            </div>
+
         </div>
     </div>
-    <!-- 흰색 사이드바 -->
-    <div class="sidebar white">
-        <!-- 자기소개 섹션 -->
-        <div class="section">
-            <div id="intro" class="section">
-                <h2>자기소개</h2>
-                <p>프론트엔드 개발의 열정이 있는 개발자입니다.<br>항상 새로운 것을 배우며 성장하는 것을 즐깁니다.</p>
-            </div>
-        </div>
-        <!-- 경험 섹션 -->
-        <div class="section">
-            <div id="experience" class="section">
-                <h2>경험</h2>
-                <ul>
-                    <li>프론트엔드
-                        <ol>
-                            <li>html/css/javascript</li>
-                            <li>웹페이지 잘 만든다</li>
-                            <li>다 잘함</li>
-                        </ol>
-                    </li>
-                    <li>백엔드
-                        <ol>
-                            <li>자바 잘함</li>
-                            <li>오라클 더 잘함</li>
-                        </ol>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- 보유 기술 섹션 -->
-        <div class="section">
-            <div id="skills" class="section">
-                <h2>보유 기술</h2>
-                <ul>
-                    <li>자바 </li>
-                    <li>오라클 </li>
-                </ul>
-            </div>
-        </div>
-        <!-- 교육 섹션 -->
-        <div class="section">
-            <div id="Education" class="section">
-                <h2>Education</h2>
-                <table>
-                    <tr>
-                        <th>학교 이름</th>
-                        <th>전공</th>
-                        <th>기간</th>
-                        <th>구분</th>
-                    </tr>
-                    <tr>
-                        <td>한국대학교</td>
-                        <td>국제통상</td>
-                        <td>2014 - 2019.2</td>
-                        <td>졸업</td>
-                    </tr>
-                    <tr>
-                        <td>외국학교</td>
-                        <td>종합학교</td>
-                        <td>2001 - 2012.2</td>
-                        <td>졸업</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-    </div>
+    <!-- footer  -->
+    <footer>
+        <div id="current-time">Time: <span id="time"></span></div>
+    </footer>
 
-    <div>현재시간: <span id="time" class="time"></span></div>
-    
 </body>
 
 </html>
 <script>
+    // 푸터 실시간
+    function updateTime() {
+        var now = new Date();
+        var hours = String(now.getHours()).padStart(2, '0');
+        var minutes = String(now.getMinutes()).padStart(2, '0');
+        var seconds = String(now.getSeconds()).padStart(2, '0');
+        document.getElementById('time').textContent = hours + ':' + minutes + ':' + seconds;
+    }
 
+    setInterval(updateTime, 1000);
+    updateTime();
+    // Scroll animation
 
-    document.querySelectorAll('.sidebar.grey a').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
+    $('.sidebar.grey a').on('click', function (e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $(target).animate({
+            scrollTop: $(target).offset().top
+        }, 'smooth');
     });
 
+    // Transform scale animation
+    $('.clickable-section').on('click', function () {
 
-    function displayNow(){
-        setInterval(displayNow, 1000);
-        var now = new Date;
-        var time = now.toLocaleTimeString();
-    document.querySelector("#time").innerHTML = time;
-    }
-    // 위치 배치
+        if ($(this).css('transform') == 'none' || $(this).css('transform') == 'matrix(1, 0, 0, 1, 0, 0)') {
+
+            $(this).css('transform', 'scale(1.2)');
+        } else {
+
+            $(this).css('transform', 'scale(1)');
+        }
+    });
 </script>
+

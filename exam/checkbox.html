@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../jQuery/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .subject-img {
+            width: 300px;
+            height: 300px;
+            display: none;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" value="java" name="subject"> <span>Java</span>
+    <img src="../exam/img/java.jpg" alt="Java" class="subject-img"><br>
+
+    <input type="checkbox" value="oracle" name="subject"> <span>Oracle</span>
+    <img src="../exam/img/oracle.jpg" alt="Oracle" class="subject-img"><br>
+
+    <input type="checkbox" value="html/css/javascript" name="subject"> <span>html/css/javascript</span>
+    <img src="../exam/img/html.jpg" alt="HTML/CSS/JavaScript" class="subject-img"><br>
+
+    <input type="checkbox" value="jQuery" name="subject"> <span>jQuery</span>
+    <img src="../exam/img/jquery.jpg" alt="jQuery" class="subject-img"><br>
+
+</body>
+
+</html>
+<script>
+    $(function () {
+        $("input[type='checkbox'][name='subject']").change(function () {
+            var checked = $(this).is(':checked');
+            $(this).next('span').next('img').css('display', checked ? 'block' : 'none');
+        });
+    });
+</script>

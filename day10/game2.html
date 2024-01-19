@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .number {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+    </div>
+</body>
+</html>
+
+<script>
+    var body = document.querySelector("body");
+    var cnt = 1;
+    for(let i=1; i<10; i++){
+        (function(i){
+        var height = screen.availHeight;
+        var width = screen.availWidth;
+    
+        var x = parseInt(Math.random() * (width-1000));
+        var y = parseInt(Math.random() * (height-300));
+        var num = document.createElement("div");
+        num.innerHTML = i;
+        num.style.left = x +"px";
+        num.style.top = y +"px";
+        num.setAttribute("class", "number");
+
+        num.addEventListener("click", function(){
+            if( i == cnt){
+                document.querySelector("#number_"+ cnt).remove()
+                cnt++;
+            }
+
+        })
+
+        body.append(num);
+        })(i);
+};
+    
+</script>

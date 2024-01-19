@@ -1,6 +1,277 @@
 <!-- 1. 자기소개서 페이지(업데이트, 링크 걸기)
+    1-1)'회색 사이드바' 깃허브 링크 걸기
+        : github 로고 이미지"https://banner2.cleanpng.com/20180824/jtl/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b0bac53.1999041115351082030478.jpg" 클릭 시 github 새로운 탭에서 주소로 이동
+        'https://github.com/Nomiya623'
+
+    
+
+    1-2) 실시간 시간 반영 (footer: 위치에서 출력)
+    1-3)공백이 많지 않도록 대충 아무 내용
+    1-4) 애니메이션 효과 (scale = 1.2)
+        : '자기소개, 경험, 보유 기술, 교육 색션' 각 섹션 클릭 시 scale 1.2 로 커지는 애니메이션 적용
+    1-5) javascript/jquery 이용한 1~2개이상
+    (except: alert, confirm, time)
+    '보유 기술 자바, 오라클, 자바스크립트'
+    각 리스트를 image box, detail box로 변경
+
+ 1-1-->
+<div class="sidebar grey">
+    <!-- Other sidebar content -->
+
+    <!-- GitHub Link -->
+    <a href="https://github.com/Nomiya623" target="_blank">
+        <img src="https://banner2.cleanpng.com/20180824/jtl/kisspng-computer-icons-logo-portable-network-graphics-clip-icons-for-free-iconza-circle-social-5b7fe46b0bac53.1999041115351082030478.jpg" alt="GitHub" style="width: 30px; height: 30px;">
+    </a>
+    add also GitHub link text 'Github' bottom of logo
+    <!-- Rest of your sidebar content -->
+</div>
+
+<!-- 1-4) -->
+<div id="intro" class="section clickable-section">
+    <!-- Content for 자기소개 -->
+</div>
+<div id="experience" class="section clickable-section">
+    <!-- Content for 경험 -->
+</div>
+<div id="skills" class="section clickable-section">
+    <!-- Content for 보유 기술 -->
+</div>
+<div id="education" class="section clickable-section">
+    <!-- Content for 교육 -->
+</div>
+<style>
+.clickable-section {
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Optional, to indicate the section is clickable */
+}
+</style>
+<script>
+$('.clickable-section').on('click', function() {
+    // Check if the section is already scaled
+    if ($(this).css('transform') == 'none' || $(this).css('transform') == 'matrix(1, 0, 0, 1, 0, 0)') {
+        // If not scaled, scale to 1.2
+        $(this).css('transform', 'scale(1.2)');
+    } else {
+        // If already scaled, reset to 1
+        $(this).css('transform', 'scale(1)');
+    }
+});
+</script>
+
+
+<!-- 보유 기술 section -->
+<div class="section">
+    <div id="skills" class="section clickable-section">
+        <h2>보유 기술</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <img src="path_to_java_image.jpg" alt="Java">
+                <div class="skill-detail">자바</div>
+            </div>
+            <div class="skill-item">
+                <img src="path_to_oracle_image.jpg" alt="Oracle">
+                <div class="skill-detail">오라클</div>
+            </div>
+            <div class="skill-item">
+                <img src="path_to_javascript_image.jpg" alt="JavaScript">
+                <div class="skill-detail">자바스크립트</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+.skills-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.skill-item {
+    text-align: center;
+}
+
+.skill-item img {
+    width: 80px; /* Adjust as necessary */
+    height: 80px; /* Adjust as necessary */
+    margin-bottom: 10px;
+}
+
+.skill-detail {
+    color: #ffffff;
+    font-size: 1em;
+}
+</style>
+    
+<!-- gender -->
+<div class="container">
+    <!-- Existing fields: Username and Password -->
+
+    <!-- Gender Selection -->
+    <label><b>Gender</b></label>
+    <div>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">남성</label>
+
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">여성</label>
+
+        <input type="radio" id="other" name="gender" value="other" required>
+        <label for="other">기타</label>
+    </div>
+
+    <!-- Login button, Remember me checkbox, etc. -->
+</div>
+
+
+    <!-- 
+        
+    2.1 css  적용방법:     
     2. 반응향 웹, mediaquery 
     
     3. 도형을 맞춰서 만들고 액션 수정
-    4. 회원가입 페이지 만들기(로그인)
+
+
+
+    4. 회원가입 페이지 만들기(로그인)-> mediaquery
 -->
+<style>
+
+
+
+
+@media screen and (max-width: 768px) {
+            span.psw {
+                display: block;
+                float: none;
+            }
+
+            .cancelbtn {
+                width: 100%;
+            }
+        }
+
+@media screen and (max-width: 768px) {
+    .modal-content {
+        width: 90%; /* Slightly smaller width for tablet screens */
+    }
+    /* Other tablet-specific styles */
+}
+
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 95%; /* Use almost full width for small screens */
+    }
+    img.avatar {
+        width: 60%; /* Increase size of avatar for smaller screens */
+    }
+    /* Other phone-specific styles */
+}
+@media screen and (min-width: 992px) {
+    .modal-content {
+        width: 50%; /* Fixed width for larger screens */
+    }
+    /* Other desktop-specific styles */
+}
+
+</style>
+1.'비밀번호' label 다음 줄에 '비밀번호 확인'입력 label 추가
+
+1-2.'비밀번호 확인' label 다음 줄에 '이름' 입력 label 추가
+2. '성별' label 다음 줄에 label= '취미', id='음악', '영화', '독서' 다중 선택창 추가
+3. 가입경로 label에 '선택하세요' 누르면 select list로 'sns', '웹사이트', '친구 추천', '기타' 출력
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>회원가입 폼</title>
+</head>
+<body>
+
+<h2>회원가입 폼</h2>
+
+<form action="/submit_page.php">
+    <!-- 기존 필드들... -->
+
+    <!-- 비밀번호 확인 -->
+    <label for="psw-repeat"><b>비밀번호 확인</b></label>
+    <input type="password" placeholder="비밀번호 재입력" name="psw-repeat" required>
+
+    <!-- 이름 -->
+    <label for="name"><b>이름</b></label>
+    <input type="text" placeholder="이름 입력" name="name" required>
+
+    <!-- 취미 -->
+    <label><b>취미</b></label>
+    <div>
+        <input type="checkbox" id="music" name="hobby" value="음악">
+        <label for="music">음악</label>
+
+        <input type="checkbox" id="movie" name="hobby" value="영화">
+        <label for="movie">영화</label>
+
+        <input type="checkbox" id="reading" name="hobby" value="독서">
+        <label for="reading">독서</label>
+    </div>
+
+    <!-- 가입경로 -->
+    <label for="referral"><b>가입경로</b></label>
+    <select name="referral" id="referral">
+        <option value="">선택하세요</option>
+        <option value="sns">sns</option>
+        <option value="website">웹사이트</option>
+        <option value="friend">친구 추천</option>
+        <option value="other">기타</option>
+    </select>
+
+    <!-- 제출 버튼 -->
+    <button type="submit">가입하기</button>
+</form>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .subject-image {
+            width: 300px;
+            height: 300px;
+            display: none; /* 초기에 이미지 숨김 */
+        }
+    </style>
+</head>
+<body>
+    <input type="checkbox" value="java" name="subject"> <span>Java</span>
+    <img src="path_to_java_image.jpg" alt="Java" class="subject-image"><br>
+
+    <input type="checkbox" value="oracle" name="subject"> <span>Oracle</span>
+    <img src="path_to_oracle_image.jpg" alt="Oracle" class="subject-image"><br>
+
+    <input type="checkbox" value="html/css/javascript" name="subject"> <span>html/css/javascript</span>
+    <img src="path_to_html_css_js_image.jpg" alt="HTML/CSS/JavaScript" class="subject-image"><br>
+
+    <input type="checkbox" value="jQuery" name="subject"> <span>jQuery</span>
+    <img src="path_to_jquery_image.jpg" alt="jQuery" class="subject-image"><br>
+
+    <button>Click</button>
+</body>
+</html>
+
+<script>
+    $(function () {
+        $("input[type='checkbox'][name='subject']").change(function () {
+            var checked = $(this).is(':checked');
+            $(this).next('span').next('img').css('display', checked ? 'block' : 'none');
+        });
+    });
+  
+</script>
