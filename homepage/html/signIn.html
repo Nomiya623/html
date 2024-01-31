@@ -51,10 +51,11 @@
                 <button>Sign Up</button>
             </form>
         </div>
-        <div class="form-container sign-in-container">
-            <form action="#">
-                <div class="social-container">
-
+        <div class="container" id="container">
+            <div class="form-container sign-in-container">
+                <form action="index.html" method="post">
+                    <h1>Sign in</h1>
+                    <div class="social-container">
                     <a href="https://accounts.kakao.com/login/?continue=https%3A%2F%2Faccounts.kakao.com%2Fweblogin%2Faccount%2Finfo"
                         class="social" target="_blank"><i class="fab fa-kakaotalk-k"></i>
                         <img src="../images/logos/kakao-talk.png" alt="KakaoTalk" /></a>
@@ -65,11 +66,11 @@
                             class="fab fa-naver-n"></i>
                         <img src="../images/logos/naver.png" alt="Naver" /></a>
                 </div>
-                <span>or use your social account</span>
-                <input type="userId" placeholder="ID" />
-                <input type="password" placeholder="Password" />
+                <span>or use your account</span>
+                <input type="userId" placeholder="ID" required />
+                <input type="password" placeholder="Password" required />
                 <a href="#">Forgot your password?</a>
-                <button>Sign In</button>
+                <button type="submit">Sign In</button>
             </form>
         </div>
         <div class="overlay-container">
