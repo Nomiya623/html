@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f7fa;
+            color: #4d4d4d;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: 50px 1fr 50px;
+            grid-template-areas:
+                "nav header"
+                "nav main"
+                "nav footer";
+            height: 100vh;
+        }
+        nav {
+            grid-area: nav;
+            background: #333;
+            color: #fff;
+        }
+        header {
+            grid-area: header;
+            background: #fff;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        main {
+            grid-area: main;
+            padding: 20px;
+            overflow: auto;
+        }
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* Further styling and media queries would go here */
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <nav>
+            <!-- Side navigation content -->
+            <ul>
+                <li>Dashboard</li>
+                <li>Orders</li>
+                <li>Products</li>
+                <!-- More items -->
+            </ul>
+        </nav>
+        <header>
+            <!-- Top bar content -->
+            <input type="search" placeholder="Search...">
+            <div>User Profile</div>
+        </header>
+        <main>
+            <!-- Dashboard content -->
+            <div>Total Revenue</div>
+            <div>Total Sales</div>
+            <!-- More sections -->
+        </main>
+        <footer>
+            <!-- Footer content -->
+            Footer Information
+        </footer>
+    </div>
+</body>
+</html>
